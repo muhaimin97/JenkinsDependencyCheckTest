@@ -3,7 +3,7 @@ pipeline {
 	stages {
 		stage('Checkout SCM') {
 			steps {
-				git '/home/JenkinsDependencyCheckTest'
+				git 'C:\Users\muhai\Downloads\Y3T1\ICT3103 Secure Software Devlopment\W6\LAB\OWASP Jenkins Repo\JenkinsDependencyCheckTest'
 			}
 		}
 
