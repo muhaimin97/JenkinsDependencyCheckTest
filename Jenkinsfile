@@ -3,13 +3,13 @@ pipeline {
 	stages {
 		stage('Checkout SCM') {
 			steps {
-				git 'C:/Users/muhai/Downloads/Y3T1/ICT3103 Secure Software Devlopment/W6/LAB/OWASP Jenkins Repo/JenkinsDependencyCheckTest'
+				git 'https://github.com/muhaimmin97/JenkinsDependencyCheckTest.git'
 			}
 		}
 
 		stage('OWASP DependencyCheck') {
 			steps {
-				dependencyCheck additionalArguments: '--format HTML --format XML', odcInstallation: 'Default'
+				dependencyCheck additionalArguments: '--format HTML --format XML --suppression suppression.xml', odcInstallation: 'Default'
 			}
 		}
 	}	
